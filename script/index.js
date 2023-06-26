@@ -34,3 +34,13 @@ myForm.addEventListener("submit", (event) => {
     messagePopupBox.style.display = "flex"
 })
 
+//Voir plus scroll vers Naissance d'un héros
+const voirPlus = document.querySelector(".seeMore")
+const voir = document.querySelector(".plus")
+
+voirPlus.addEventListener("click", () => {
+    voir.scrollIntoView({
+        behavior: "smooth"
+    })
+})
+

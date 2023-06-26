@@ -19,3 +19,12 @@ const observer = new IntersectionObserver(handleIntersect, options)
 document.querySelectorAll(".reveal").forEach(function(r){
     observer.observe(r)
 })
+
+//Animation de la barre latérale pour les logos réseaux sociaux
+const socialLeftDiv = document.querySelector(".reseauxSoc")
+socialLeftDiv.animate([
+    { transform: 'translateY(-300px)' },
+    { transform: 'translateY(0)' }
+  ], {
+    duration: 1500,
+  });
