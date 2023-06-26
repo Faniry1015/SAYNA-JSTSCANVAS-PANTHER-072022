@@ -7,9 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/index.css">
 
     <script src="script/main.js" defer></script>
-    
+    <script src="script/index.js" defer></script>
+
     <title>Home | Black Panther</title>
 </head>
 
@@ -172,7 +174,7 @@
         <section class="sec3PrincAs">
 
             <article class="sec3PrincAs__artP">
-                <section  class="reveal">
+                <section class="reveal">
                     <h2>Naissance d’un prince</h2>
                     <p>
                         T'Challa est né au Wakanda, un pays isolationniste situé en Afrique, du monarque régnant T'Chaka
@@ -216,7 +218,7 @@
 
                 </section>
 
-                <section  class="reveal">
+                <section class="reveal">
                     <h2>un heros vengeur</h2>
                     <blockquote>
                         <p>
@@ -259,7 +261,7 @@
                     </blockquote>
                 </section>
 
-                <section  class="reveal">
+                <section class="reveal">
                     <h2>un heros PROTECTEUR ET JUSTICIER</h2>
                     <blockquote>
                         <p>
@@ -361,22 +363,29 @@
                 </div>
 
                 <div>
-                    <input type="text" name="Nom" id="Nom" placeholder="Nom" required>
+                    <input type="text" name="Nom" id="userName" placeholder="Nom">
+                    <div class="noName"></div>
                 </div>
 
                 <div>
-                    <input type="text" name="Email" id="Email" placeholder="Email" required>
+                    <input type="text" name="Email" id="userMail" placeholder="Email">
+                    <div class="invalidMail"></div>
                 </div>
 
                 <div>
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Message" required></textarea>
+                    <textarea name="" id="mainMessage" cols="30" rows="10" placeholder="Message"></textarea>
+                    <div class="warningMessage"></div>
                 </div>
 
-                <button type="submit" class="submitBtn" id="submitBtnForm">ENVOYER</button>
-                <!-- Message d'alerte pour l'envoi du formulaire -->
-                <div class="alert" id="popupBox">
+                <button type="submit" class="submitBtn" id="submitBtnMessage">ENVOYER</button>
+
+                <!-- Message d'alerte lors de l'envoi du formulaire -->
+                <div class="alert messagePopupBox">
+                    <div class="forFlex">
+                        <h2> Merci! Votre message a bien été envoyé au Wakanda</h2>
+                    </div>
                     <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-                    Merci! Votre message a bien été envoyé SI tous les champs ont correctement été renseignés
+
                 </div>
 
             </form>
@@ -385,7 +394,7 @@
     </main>
 
     <!-- FOOTER -->
-    <footer  class="reveal">
+    <footer class="reveal">
         <div class="footerDiv">
             <div class="logo">
                 <div class="logo__imgCont">
