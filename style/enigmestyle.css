@@ -1,0 +1,212 @@
+/* voir bordures */
+/* *{
+    border: solid 0.2px grey;
+} */
+
+/* Définition de la palette de couleur*/
+:root {
+    --myWhite: #FFFFFF ;
+    --mySoftPink : #F2CEF2 ;
+    --mySoftViolet : #9E91B7 ;
+    --myPink : #DF99F2 ;
+    --myViolet: #3D2DA6;
+    --myBlue : #07338C;
+    --myDarkBlue:#021740;
+ }
+
+
+/* SECTION 1 : Relève le défi */
+/* Définition des grilles */
+.sec1En {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "titre"
+        "texte"
+        "photo";
+    margin-left: 12.5%;
+}
+
+@media screen and (min-width: 700px) {
+    .sec1En {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "photo  titre"
+            "photo  texte";
+        margin-right: 10%;
+    }
+}
+
+
+.sec1En__imgCont {
+    grid-area : photo;
+    align-self: center;
+}
+
+.sec1En__titCont {
+    grid-area : titre;
+    align-self: flex-end;
+}
+
+.sec1En__art {
+    grid-area : texte;
+    justify-self: center;
+    align-self: center;
+}
+
+/* Alignement à l'intérieur des grilles */
+.sec1En__imgCont img {
+    max-width: 100%;
+}
+
+.sec1En__titCont__title {
+    font-family: Beyno;
+    line-height: 50px;
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+.sec1En__art{
+    padding: 20%;
+    background: url(../Assets/Illustrations_Logo/Enigme/Pantherenigme2Sansbord.png) no-repeat, url(../Assets/Illustrations_Logo/Enigme/Pantherenigme3.png) no-repeat;
+    background-size: 100% 100%, contain;
+    background-position: top, bottom;
+}
+
+
+/* SECTION 2 : Section Principale et formulaire */
+.sec2En h2 {
+    font-family: "Wakanda Forever";
+    font-size: 30px;
+    max-width: 80%;
+    letter-spacing: 3px;
+    line-height: 40px;
+}
+
+.sec2En__art {
+    text-align: center;
+}
+
+.sec2En {
+    display: flex;
+    flex-direction: column;
+    margin: 10vw 10% 10vw 15%;
+}
+
+/* Définition d'une grille pour placer les éléments sur les grands écrans*/
+@media screen and (min-width: 850px) {
+    .sec2En {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+            "title  title title ."
+            "transc  transc art art"
+            "formu  formu art art";
+    }
+
+    .sec2En__formCont {
+        margin-top: 10vw;
+        margin-right: 20%;
+    }
+
+    .sec2En__art {
+        justify-self: center;
+        align-self: center;
+    }
+
+    .sec2En__title {
+        grid-area: title;
+        margin-bottom: 5vw;
+    }
+    
+    .sec2En__transcript {
+        grid-area: transc;
+    }
+    
+    .sec2En__formCont {
+        grid-area: formu;
+    }
+    .sec2En__art {
+        grid-area: art;
+        align-self: center;
+    }
+}
+
+/* Mettre la traduction de l'alphabet en inline */
+dt, dd {
+    display: inline;
+    font-size: 16px;
+}
+
+dd {
+    font-family: "Wakanda Forever";
+}
+
+/* Mise en page à l'intérieur des grilles */
+
+.sec2En__formCont textarea {
+    color: var(--mySoftPink);
+    border-color: var(--mySoftPink);
+    width: 100%;
+    margin: 2% 0 10%;
+}
+
+.sec2En__formCont textarea::placeholder {
+    color: var(--mySoftPink);
+}
+
+/* Boutons submit du formulaire */
+.sec2En__formCont button {
+    /* width: 174px;
+    height: 54px; trop grand */
+    width: 125px;
+    height: 40px;
+    border: none;
+    border-radius: 38px;
+    background-color: var(--mySoftPink);
+    font-weight: bolder;
+    font-size: 12px;
+}
+
+.sec2En__formCont button:hover {
+    filter: drop-shadow(0 0 10px var(--mySoftPink)) ;
+}
+
+.sec2En__formCont__subBtnCont {
+    display: flex;
+    justify-content: center;
+}
+
+/* Popup Box après soumission du formulaire (avec un peu de JavaScript)*/
+#EnigPopupBox {
+    display: none;
+    padding: 20px;
+    background-color:#3d2da691;
+    color: white;
+    margin: 15px;
+    border-radius: 38px;
+  }
+
+  /* Popup Box The close X button */
+  .EnigClosebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .EnigClosebtn:hover {
+    color: black;
+  }
+
+.sec2En__art{
+    padding: 20%;
+    background: url(../Assets/Illustrations_Logo/Enigme/Pantherenigme2Sansbord.png) no-repeat;
+    background-size: 100% 100%;
+    background-position: top;
+}

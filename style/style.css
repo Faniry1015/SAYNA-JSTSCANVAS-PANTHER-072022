@@ -1,0 +1,690 @@
+/* Remise à zéro des paramètres et Box sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Définition de la palette de couleur*/
+ :root {
+    --myWhite: #FFFFFF ;
+    --mySoftPink : #F2CEF2 ;
+    --mySoftViolet : #9E91B7 ;
+    --myPink : #DF99F2 ;
+    --myViolet: #3D2DA6;
+    --myBlue : #07338C;
+    --myDarkBlue:#021740;
+ }
+
+ /* Typographies */
+
+@font-face {
+    font-family: Panthera;
+    src: url(../Assets/Polices/Panthera/PantheraRegular-MVZ9J.ttf);
+}
+
+@font-face {
+    font-family: Beyno;
+    src: url(../Assets/Polices/beyno/BEYNO.ttf);
+}
+
+@font-face {
+    font-family: "Wakanda forever";
+    src: url(../Assets/Polices/Wakanda_Forever/WakandaForever-Regular.ttf);
+}
+
+@font-face {
+    font-family: Cantarell;
+    src: url(../Assets/Polices/Cantarell/Cantarell-Regular.ttf);
+}
+
+html {
+    font-family: Cantarell;
+    font-size: 14px;   /* 16px trop grand */
+    text-align: justify;
+    color: var(--myWhite);
+}
+
+h1 {
+    font-family: Panthera;
+    font-size: 45px;  /* 68px trop grand */
+    color: var(--mySoftViolet);
+    margin: 10px 0;
+    text-align: left;
+}
+
+h2 {
+    font-family: Beyno;
+    font-size: 20px;  /* 32px trop grand */
+    color: var(--mySoftViolet);
+    text-align: left;
+}
+
+blockquote,
+blockquote p{
+    font-family: Cantarell;
+    font-size: 12px;
+}
+
+header li a {
+    font-family: Beyno;
+    font-size: 20px;
+}
+
+/* Hyperliens */
+a {
+    color: var(--myWhite);
+}
+
+a:hover, button:hover {
+    cursor: pointer;
+}
+
+/* Background et marges général*/
+body {
+    background: url(../Assets/Illustrations_Logo/All_pages/arrière_plan.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+p {
+    margin: 15px 0;
+}
+
+
+/* Icônes réseaux sociaux latéral gauche */
+.reseauxSoc {
+    position: fixed;
+    top: 0;
+    left : 3%;
+}
+
+.reseauxSoc table{
+    border-collapse: collapse;
+    border-left: var(--mySoftViolet) 3px solid;
+}
+
+.reseauxSoc__TraitSupDiv {
+    height:200px ;
+    border-right: var(--mySoftViolet) 3px solid;
+
+}
+
+.reseauxSoc__iconCont {
+    display: flex; 
+    width: 20px;
+    height:200px ;
+}
+
+.reseauxSoc__iconCont__iconDiv {
+    position: relative;
+    left: 8px;
+    height:200px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.reseauxSoc__iconCont__iconDiv a:hover {
+    filter: invert(0) sepia(100%) saturate(0%) hue-rotate(3deg) brightness(100%) contrast(104%)
+}
+
+/* Animation slidein à l'ouverture de la page */
+
+@keyframes slidein {
+    from {
+        margin-right: 100%;
+        width: 0%;
+    }
+  
+    to {
+      margin-right: 0%;
+      width: 100%;
+    }
+  }
+
+p, img, ul, img, h1, h2 {
+    overflow: hidden;
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
+
+
+/* HEADER */
+header {
+    margin: 25px 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__logoCont {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 150px;
+} 
+
+.header__logoCont img:hover {
+    filter: invert(35%) sepia(16%) saturate(494%) hue-rotate(219deg) brightness(94%) contrast(91%);
+}
+
+.header__nav {
+    width: 30%;
+    min-width: fit-content;
+}
+
+
+
+.header__nav ul{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+@media screen and (max-width: 500px) {
+    .header__nav ul{
+        flex-direction: column;
+        align-items: flex-start;
+}
+}
+
+.header__nav li {
+    list-style: none;
+    margin: 5px;
+}
+
+.header__nav a {
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.header__nav a:hover {
+    text-decoration: underline;
+}
+
+.header__nav__currentPage,
+.header__nav__currentPage a{
+    color: var(--mySoftViolet);
+    text-decoration: underline;
+}
+
+
+/* MAIN */
+/* SECTION 1: Black Panther */
+.sec1BP {
+    margin: 50px 5% 20px 10%;
+}
+
+/* media queries */
+@media screen and (min-width: 700px) {
+    .sec1BP {
+        display: flex;
+        align-items: center;
+        margin: 0 0 0 10%; 
+    }
+
+    .sec1BP__art {
+        width: 40%;
+    }
+
+    .sec1BP__imgCont {
+        width: 60%;
+    }
+}
+
+.sec1BP__art {
+    margin-left: 15px
+}
+
+.sec1BP__imgCont img {
+    width: 100%;
+}
+
+
+/* SECTION 2: Carroussel acteurs descriptions */
+.sec2Carrous {
+    margin-left: 10%;
+    background-color: var(--myDarkBlue);
+    max-width: 90%;
+}
+
+
+/* Configuration pour les petites écrans */
+.sec2Carrous__figCont {
+    display: grid;
+    grid-template-areas: 
+        "sec2Img1 sec2Desc1"
+        "sec2Img2 sec2Desc2"
+        "sec2Img3 .";
+    max-width: 100%;
+    gap: 10px;
+}
+
+.secImg1 {
+    grid-area: secImg1;
+}
+
+.secDesc1 {
+    grid-area: secDesc1;
+}
+
+.secImg2 {
+    grid-area: secImg2;
+}
+
+.secDesc2 {
+    grid-area: secDesc2;
+}
+
+.secImg3 {
+    grid-area: secImg3;
+}
+
+
+/* Media queries */
+@media screen and (min-width: 1000px) {
+    .sec2Carrous__figCont {
+        grid-template-areas: 
+            "sec2Img1 sec2Desc1 sec2Img2 sec2Desc2 sec2Img3";
+        column-gap: 10px;
+        grid-template-columns: 0.6fr 1.2fr 0.6fr 1.2fr 0.6fr;
+        margin-left: 5%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sec2Carrous__figCont {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10%;
+    }
+}
+
+.sec2Carrous__figCont__descCont {
+    margin: 10px 0;
+    padding-right: 10%;
+}
+
+.sec2Carrous__figCont__fig__imgCont img{
+    max-height: 250px;
+   }
+
+/* Hover zoom sur les personnages */
+.sec2Carrous__figCont__fig__imgCont img:hover{
+       transform: scale(110%);
+      }
+
+
+/* SECTION 3 : Article principal et Aside */
+.sec3PrincAs {
+    margin: 75px 5% 75px 10%;
+}
+
+/* Media queries */
+@media screen and (min-width: 700px) {
+    .sec3PrincAs {
+        display:grid;
+        grid-template-columns: 2fr 1fr; 
+        column-gap: 3%;
+    }
+}
+
+/* Article principale */
+.sec3PrincAs__artP {
+    margin: 40px 5% 0;
+}
+
+.sec3PrincAs__artP section {
+    margin-top: 30px
+}
+
+/* Aside */
+.sec3PrincAs__as {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Donner au conteneur une hauteur plus petit que l'image et ajouter un z-index */
+.sec3PrincAs__as__fig__imgCont{
+    text-align: center;
+    height: 175px; 
+}
+
+.sec3PrincAs__as__fig__imgCont img {
+    max-width: 250px;
+    z-index: 1;
+}
+
+/* Contenu principal aside */
+.sec3PrincAs__as__fig__descDiv {
+    background-color: var(--myWhite);
+    border-radius: 10px;
+    color: black;
+    padding: 160px 10% 75px;
+}
+
+.sec3PrincAs__as__fig__descDiv > *,
+.sec3PrincAs__as__fig__descDiv__detailsList ul li{
+    margin: 10px 0;
+    text-align: left;
+    
+}
+
+.sec3PrincAs__as__fig__descDiv__figcaption {
+    text-align: center;
+    font-weight: bold;
+}
+
+.sec3PrincAs__as__fig__descDiv li{
+    list-style: none;
+}
+
+/* Boutons violets dans Aside */
+.sec3PrincAs__as__fig__descDiv__btn ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sec3PrincAs__as__fig__descDiv__btn ul li {
+    background-color: #3d2da6c4;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 2px;
+}
+
+.sec3PrincAs__as__fig__descDiv__btn ul li:hover {
+    background-color: var(--myViolet);
+}
+
+.sec3PrincAs__as__fig__descDiv a{
+    text-decoration: none;
+    font-size: 11px;
+}
+
+.sec3PrincAs__as__fig__descDiv span{
+    font-weight: bold;
+}
+
+/* Image de black panther dans la partie inférieure de Aside */
+.sec3PrincAs__as__botfig img {
+    max-width: 100%
+}
+
+
+/* SECTION 4 : Formulaire */
+.sec4FormSec {
+    background: url(../Assets/Illustrations_Logo/Accueil/Pantherhome7.png) no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.sec4FormSec__form {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.85) 15%, rgba(255, 255, 255, 0.08));
+    margin: 130px 0 75px;
+    padding: 20px;
+    width: 50%;
+    border-radius: 100px ;
+    border: none;
+    text-align: center;
+    }
+
+.sec4FormSec__form p,
+.sec4FormSec__form h2  {
+    color: black;
+    text-align: center;
+    font-family: cantarell;
+    margin: 0;
+}
+
+.sec4FormSec__form h2  {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.sec4FormSec__form p{
+    font-size: 12px;
+    margin: 0 10px;
+}
+
+/* Formatage des input et textarea du formulaire */
+.sec4FormSec__form input {
+    /* width: 520px;
+    height: 56px; trop grand */
+    width: 70%;
+    height: 40px;
+    border-radius: 38px;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: solid rgba(0, 0, 0, 0.5) 1px;
+}
+
+.sec4FormSec__form input,
+.sec4FormSec__form textarea {
+    margin: 5px 0;
+}
+
+textarea {
+    /* width: 520px;
+    padding: 10px 20px;  trop grand*/
+    width: 70%;
+    padding: 10px 20px;
+    border-radius: 38px;
+    background-color: transparent;
+    border: solid rgba(0, 0, 0, 0.5) 1px;
+}
+
+.sec4FormSec__form input::placeholder,
+.sec4FormSec__form textarea::placeholder {
+    color: black;
+    font-family: cantarell;
+}
+
+/* Media queries pour réduire les marges du formulaire pour les petites écrans */
+@media screen and (max-width: 600px) {
+    .sec4FormSec__form input {
+        width: 100%;
+        height: 30px;
+        border-radius: 10px;
+        padding: 5px 15px;
+    }
+
+    .sec4FormSec__form textarea {
+        width: 100%;
+        border-radius: 10px;
+        padding: 5px 15px;
+    }
+}
+
+/* Boutons submit du formulaire */
+.sec4FormSec__form button {
+    /* width: 174px;
+    height: 54px; trop grand */
+    width: 125px;
+    height: 40px;
+    border: none;
+    border-radius: 38px;
+    background-color: var(--mySoftPink);
+    font-weight: bolder;
+    font-size: 12px;
+}
+
+.submitBtn:hover {
+    filter: drop-shadow(0 0 10px var(--mySoftPink)) ;
+}
+
+/* Popup Box après soumission du formulaire (avec un peu de JavaScript)*/
+#popupBox {
+    display: none;
+    padding: 20px;
+    background-color:#3d2da691;
+    color: white;
+    margin: 15px;
+    border-radius: 38px;
+  }
+  
+  /* Popup Box The close X button */
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .closebtn:hover {
+    color: black;
+  }
+
+
+/* FOOTER */
+/* Typographie du footer */
+.footerDiv p, 
+.footerDiv a,
+.footerDiv li {
+    font-family: Cantarell;
+    font-size: 10px;
+    list-style: none;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+footer h3 {
+    font-family: Cantarell;
+    font-size: 14px; /* 22px trop grand */
+    letter-spacing: 3px;
+    margin: 5px 0 10px;
+}
+
+footer {
+    background: url(../Assets/Illustrations_Logo/All_pages/back_footer.png) no-repeat;
+    background-size: 100% 100%;
+    border: solid 1px transparent;
+}
+
+.footerDiv {
+    margin: 200px 10% 50px;
+}
+
+/* Media queries pour les petites écrans */
+@media screen and (max-width: 700px) {
+    .footerDiv {
+        margin: 100px 10px 50px;
+    }
+
+    .findUs figure{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .findUs img {
+        width: 5vw;
+    }
+    
+}
+
+/* Définition d'une grille pour le positionnement des parties du footer*/
+.footerDiv {
+    display: grid;
+    grid-template-areas: 
+        "logo logo pages findUs"
+        "logo logo pol pol";
+    gap: 15px;
+}
+
+/* Media Query pour les très petites écrans */
+@media screen and (max-width: 400px) {
+    .footerDiv {
+        display: grid;
+        grid-template-areas: 
+            "logo logo"
+            "pages findUs" 
+            "pol pol";
+        gap: 15px;
+    }
+}
+
+.logo {
+    grid-area: logo;
+}
+
+.pages {
+    grid-area: pages;
+}
+
+.findUs {
+    grid-area: findUs;
+}
+
+.pol {
+    grid-area: pol;
+}
+
+/* Propriété de chaque élément du footer */
+.logo {
+display: flex;
+justify-content: center;
+}
+
+.logo__imgCont {
+    width: 25vw;
+    height: 25vw;
+    min-width: 150px;
+    min-height: 150px;
+    background: url(../Assets/Illustrations_Logo/All_pages/footer1.png) no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.logo__imgCont__img {
+    position: relative;
+    right: 2vw;
+    width: 12vw;
+    min-width: 75px;
+}
+
+.logo__imgCont:hover {
+    transform: scale(110%);
+}
+
+.pages a:hover {
+    text-decoration: underline;
+}
+
+.findUs {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+}
+
+.findUs img {
+    max-width: 60px;
+    margin: 0 5px;
+}
+
+.findUs img:hover {
+    transform: scale(110%);
+}
+
+.pol {
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+
