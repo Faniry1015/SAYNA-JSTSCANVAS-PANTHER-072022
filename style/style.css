@@ -96,6 +96,7 @@ p {
     position: fixed;
     top: 0;
     left : 3%;
+    z-index: 2;
 }
 
 .reseauxSoc table{
@@ -129,26 +130,17 @@ p {
     filter: invert(0) sepia(100%) saturate(0%) hue-rotate(3deg) brightness(100%) contrast(104%)
 }
 
-/* Animation slidein à l'ouverture de la page */
+/*Effet de transition au scroll - fade in */
+.reveal {
+    opacity : 0;
+    transform : translateX(-50px);
+}
 
-@keyframes slidein {
-    from {
-        margin-right: 100%;
-        width: 0%;
-    }
-  
-    to {
-      margin-right: 0%;
-      width: 100%;
-    }
-  }
-
-p, img, ul, img, h1, h2 {
-    overflow: hidden;
-    animation-duration: 3s;
-    animation-name: slidein;
-  }
-
+.reveal-visible {
+    opacity : 1;
+    transform: translateX(0);
+    transition: .5s
+}
 
 /* HEADER */
 header {
