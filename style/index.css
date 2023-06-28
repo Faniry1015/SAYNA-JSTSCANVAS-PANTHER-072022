@@ -1,4 +1,20 @@
+/* Vérification */
+div {
+    border: solid red 1px
+}
+
 /* SECTION 1: Black Panther */
+/* Définition de la palette de couleur*/
+:root {
+    --myWhite: #FFFFFF ;
+    --mySoftPink : #F2CEF2 ;
+    --mySoftViolet : #9E91B7 ;
+    --myPink : #DF99F2 ;
+    --myViolet: #3D2DA6;
+    --myBlue : #07338C;
+    --myDarkBlue:#021740;
+ }
+
 .sec1BP {
     margin: 50px 5% 20px 10%;
 }
@@ -32,77 +48,125 @@
 /* SECTION 2: Carroussel acteurs descriptions */
 .sec2Carrous {
     margin-left: 10%;
+}
+
+/**Stylisation générale de chaque slide */
+.item {
     background-color: var(--myDarkBlue);
-    max-width: 90%;
+    box-shadow: 0 15px #3232321a, 0 5px 15px #0000001a;
+    transition: transform 0.3s;
+    transform: translate3d(0, -2px, 0);
+    display: flex;
+    align-items: center;
 }
 
-
-/* Configuration pour les petites écrans */
-.sec2Carrous__figCont {
-    display: grid;
-    grid-template-areas: 
-        "sec2Img1 sec2Desc1"
-        "sec2Img2 sec2Desc2"
-        "sec2Img3 .";
-    max-width: 100%;
-    gap: 10px;
-}
-
-.secImg1 {
-    grid-area: secImg1;
-}
-
-.secDesc1 {
-    grid-area: secDesc1;
-}
-
-.secImg2 {
-    grid-area: secImg2;
-}
-
-.secDesc2 {
-    grid-area: secDesc2;
-}
-
-.secImg3 {
-    grid-area: secImg3;
-}
-
-
-/* Media queries */
-@media screen and (min-width: 1000px) {
-    .sec2Carrous__figCont {
-        grid-template-areas: 
-            "sec2Img1 sec2Desc1 sec2Img2 sec2Desc2 sec2Img3";
-        column-gap: 10px;
-        grid-template-columns: 0.6fr 1.2fr 0.6fr 1.2fr 0.6fr;
-        margin-left: 5%;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .sec2Carrous__figCont {
-        display: flex;
-        flex-direction: column;
-        margin-left: 10%;
-    }
-}
-
-.sec2Carrous__figCont__descCont {
-    margin: 10px 0;
-    padding-right: 10%;
+.sec2Carrous__figCont__fig__imgCont {
+    width: 40%
 }
 
 .sec2Carrous__figCont__fig__imgCont img{
-    max-height: 250px;
-   }
+    display: block;
+    width: 100%;
+    height: auto;
+}
 
-/* Hover zoom sur les personnages */
-.sec2Carrous__figCont__fig__imgCont img:hover{
-       transform: scale(110%);
-      }
+.sec2Carrous__figCont__descCont {
+    padding: 0 10px;
+    width: 60%;
+    
+}
 
+.sec2Carrous__figCont__descCont h2 {
+    color : var(--myViolet)
+}
 
+.items {
+    position: relative
+}
+
+/**CAROUSEL */
+.carousel {
+    position: relative;
+}
+
+.carousel__container {
+    transition: transform 0.3s;
+    transform: translate3d(0, 0, 0);
+}
+
+.carousel__container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.carousel__item {
+    float: left;
+}
+
+.carousel__next,
+.carousel__prev {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #fff url(../Images/fleche-droite.png) center center no-repeat;
+    background-size: 20px 20px;
+    border-radius: 50%;
+    top: 50%;
+    margin-top: -20px;
+    box-shadow: 0 15px #3232321a, 0 5px 15px #0000001a;
+    cursor: pointer;
+    right: -20px;
+    transition: transform 0.3s, opacity 0.3s
+}
+
+.carousel__next:hover,
+.carousel__prev:hover {
+    transform: scale(1.2)
+}
+
+.carousel__prev {
+    right: auto;
+    left: -20px;
+    background-image: url(../Images/fleche-gauche.png);
+}
+
+.carousel__next--hidden,
+.carousel__prev--hidden {
+    opacity: 0
+}
+
+.carousel__pagination {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    display: none;
+}
+
+.carousel__pagination__button {
+    background-color: #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 3px;
+    box-shadow: 0 2px #3232321a;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.carousel__pagination__button--active,
+.carousel__pagination__button:hover {
+    transform: scale(1.4);
+}
+
+@media screen and (min-width: 800px) {
+    .carousel__pagination {
+        display: block;
+    }
+}
 /* SECTION 3 : Article principal et Aside */
 .sec3PrincAs {
     margin: 75px 5% 75px 10%;
@@ -312,7 +376,7 @@ textarea {
     left: 10vw;
     height: 80vh;
     width: 80vw;
-    background-color:#3d2da6;;
+    background-color:#3d2da6ef;;
     margin: 15px;
     border-radius: 38px;
     z-index: 2;

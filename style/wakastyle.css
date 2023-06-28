@@ -3,6 +3,17 @@
     border: dotted 0.2px grey;
 } */
 
+/* Définition de la palette de couleur*/
+:root {
+    --myWhite: #FFFFFF ;
+    --mySoftPink : #F2CEF2 ;
+    --mySoftViolet : #9E91B7 ;
+    --myPink : #DF99F2 ;
+    --myViolet: #3D2DA6;
+    --myBlue : #07338C;
+    --myDarkBlue:#021740;
+ }
+
 /* SECTION 1 : Wakanda Forever */
 .sec1WaFo {
     background: url(../Assets/Illustrations_Logo/Wakanda/Pantherwakanda1Sansbord.png) no-repeat;

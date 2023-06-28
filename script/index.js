@@ -32,6 +32,7 @@ myForm.addEventListener("submit", (event) => {
         warningMessage.innerText = ""
     }
     messagePopupBox.style.display = "flex"
+    document.mySendMessageForm.reset()
 })
 
 //Voir plus scroll vers Naissance d'un héros
