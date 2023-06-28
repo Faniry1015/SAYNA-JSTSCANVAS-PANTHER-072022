@@ -1,7 +1,7 @@
-/* Vérification */
+/* Vérification
 div {
     border: solid red 1px
-}
+} */
 
 /* SECTION 1: Black Panther */
 /* Définition de la palette de couleur*/
@@ -49,6 +49,9 @@ div {
 .sec2Carrous {
     margin-left: 10%;
 }
+.sec2Carrous p{
+    font-size: 10px;
+}
 
 /**Stylisation générale de chaque slide */
 .item {
@@ -56,12 +59,14 @@ div {
     box-shadow: 0 15px #3232321a, 0 5px 15px #0000001a;
     transition: transform 0.3s;
     transform: translate3d(0, -2px, 0);
+    height: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .sec2Carrous__figCont__fig__imgCont {
-    width: 40%
+    width: 50%
 }
 
 .sec2Carrous__figCont__fig__imgCont img{
@@ -72,7 +77,7 @@ div {
 
 .sec2Carrous__figCont__descCont {
     padding: 0 10px;
-    width: 60%;
+    width: 50%;
     
 }
 
@@ -81,17 +86,19 @@ div {
 }
 
 .items {
-    position: relative
+    position: relative;
 }
 
 /**CAROUSEL */
 .carousel {
     position: relative;
+    overflow: hidden;
 }
 
 .carousel__container {
     transition: transform 0.3s;
     transform: translate3d(0, 0, 0);
+    display: flex;
 }
 
 .carousel__container::after {
@@ -109,14 +116,14 @@ div {
     position: absolute;
     width: 40px;
     height: 40px;
-    background: #fff url(../Images/fleche-droite.png) center center no-repeat;
+    background: var(--myDarkBlue) url(../Assets/Illustrations_Logo/Accueil/fleche-droite.png) center center no-repeat;
     background-size: 20px 20px;
     border-radius: 50%;
     top: 50%;
     margin-top: -20px;
-    box-shadow: 0 15px #3232321a, 0 5px 15px #0000001a;
+    box-shadow: 5 5px white;
     cursor: pointer;
-    right: -20px;
+    right: 0;
     transition: transform 0.3s, opacity 0.3s
 }
 
@@ -127,8 +134,8 @@ div {
 
 .carousel__prev {
     right: auto;
-    left: -20px;
-    background-image: url(../Images/fleche-gauche.png);
+    left: 0;
+    background-image: url(../Assets/Illustrations_Logo/Accueil/fleche-gauche.png);
 }
 
 .carousel__next--hidden,
@@ -266,7 +273,7 @@ div {
 
 /* SECTION 4 : Formulaire */
 .sec4FormSec {
-    background: url(../Assets/Illustrations_Logo/Accueil/Pantherhome7.png) no-repeat;
+    background: url(../Assets/Illustrations_Logo/Accueil/Pantherhome4.png) no-repeat;
     background-size: cover;
     display: flex;
     justify-content: center;
