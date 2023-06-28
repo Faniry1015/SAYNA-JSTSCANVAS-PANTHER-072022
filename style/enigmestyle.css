@@ -100,7 +100,7 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-areas: 
-            "title  title title ."
+            "title  title art art"
             "transc  transc art art"
             "formu  formu art art";
     }
@@ -148,6 +148,10 @@ dd {
 .sec2En__formCont textarea {
     color: var(--mySoftPink);
     border-color: var(--mySoftPink);
+    background-color: transparent;
+    padding: 5px 15px;
+    height: 30px;
+    border-radius: 20px;
     width: 100%;
     margin: 2% 0 10%;
 }

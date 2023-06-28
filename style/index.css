@@ -82,7 +82,8 @@ div {
 }
 
 .sec2Carrous__figCont__descCont h2 {
-    color : var(--myViolet)
+    color : var(--myViolet) ;
+    margin-top: 3px;
 }
 
 .items {
@@ -111,12 +112,11 @@ div {
     float: left;
 }
 
-.carousel__next,
-.carousel__prev {
+.carousel__next {
     position: absolute;
     width: 40px;
     height: 40px;
-    background: var(--myDarkBlue) url(../Assets/Illustrations_Logo/Accueil/fleche-droite.png) center center no-repeat;
+    background: white url(../Assets/Illustrations_Logo/Accueil/fleche-gauche.png) center center no-repeat;
     background-size: 20px 20px;
     border-radius: 50%;
     top: 50%;
@@ -127,19 +127,11 @@ div {
     transition: transform 0.3s, opacity 0.3s
 }
 
-.carousel__next:hover,
-.carousel__prev:hover {
+.carousel__next:hover{
     transform: scale(1.2)
 }
 
-.carousel__prev {
-    right: auto;
-    left: 0;
-    background-image: url(../Assets/Illustrations_Logo/Accueil/fleche-gauche.png);
-}
-
-.carousel__next--hidden,
-.carousel__prev--hidden {
+.carousel__next--hidden {
     opacity: 0
 }
 

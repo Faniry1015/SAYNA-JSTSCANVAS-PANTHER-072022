@@ -259,10 +259,8 @@ let onReady = function () {
     })
 
 }
-
-if (document.readyState !== "loading") {
     onReady()
-}
+
 
 //Message validator popup Box
 const myForm = document.querySelector(".sec4FormSec__form")
