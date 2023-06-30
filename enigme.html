@@ -69,7 +69,7 @@
     <header class="reveal">
         <div class="header__logoCont">
             <div>
-                <a href="index.html">
+                <a class="indexPage" href="index.html">
                     <img src="Assets/Illustrations_Logo/All_Pages/icon_SAYNA.png" alt="Logo SAYNA" title="Logo SAYNA">
                 </a>
             </div>
@@ -126,18 +126,23 @@
 
             <div class="sec2En__title">
                 <h2 id="sec2En__title__label">ENIGME NUMERO <span class="sec2En_currentDefNumber">1</span> </h2>
-                <p>Prouve ton talent d’espion et déchiffre cette réplique d’Okoyé écrite en Wakandais, et
-                    apprend par la même occasion la première valeur d’une Dora Milaje !</p>
+                <p class="currentQuestionSentence">Prouve ton talent d’espion et déchiffre cette réplique d’Okoyé écrite
+                    en Wakandais, et apprend par la même occasion la première valeur d’une Dora Milaje !</p>
 
-                <h2 id="sec2En__title__forTrans"> "SI JE SUIS FIDELE C’EST A CE TRONE
-                    PEU IMPORTE QUI MONTE DESSUS "</h2>
+                <p class="currentIndice"></p>
+
+                <h2 id="sec2En__title__forTrans"> "SI JE SUIS FIDELE C'EST A CE TRONE PEU IMPORTE QUI MONTE DESSUS"</h2>
             </div>
 
             <section class=" sec2En__art">
                 <p>
+                    Le savais tu ?
+                </p>
+
+                <p class="doYouKnow">
                     Voici la transicription de l’alphabet :
                 </p>
-                <dl>
+                <dl class="q1dl">
                     <dt>A = </dt>
                     <dd>A</dd> ;
                     <dt>B = </dt>
@@ -220,8 +225,9 @@
                     Tu as trouvé la réponse. Es tu prêt pour l'énigme suivante ?
                 </p>
                 <button class="nextQ">Question suivante</button>
+                <button type="submit" id="enigGoIndex">REVENIR A L'ACCUEIL</button>
             </div>
-            
+
         </div>
 
     </main>

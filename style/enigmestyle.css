@@ -154,7 +154,7 @@ dd {
 
 .sec2En__formCont textarea {
     color: var(--mySoftPink);
-    font-size: 15px;
+    font-size: 12px;
     border-color: var(--mySoftPink);
     background-color: transparent;
     padding: 15px 15px;
@@ -188,6 +188,11 @@ dd {
 .sec2En__formCont__subBtnCont {
     display: flex;
     justify-content: center;
+}
+
+/**Bouton retour à l'accueil à la fin du quizz */
+#EnigGoIndex {
+    display: none;
 }
 
 /* Popup Box après soumission du formulaire (avec un peu de JavaScript)*/
@@ -231,7 +236,7 @@ dd {
     text-align: center;
   }
 
-  .nextQ {
+  .nextQ, #enigGoIndex {
     width: 174px;
     height: 40px;
     border: none;
@@ -240,6 +245,10 @@ dd {
     font-weight: bolder;
     font-size: 12px;
     text-transform: uppercase;
+  }
+
+  #enigGoIndex {
+    display: none;
   }
 
 .sec2En__art{
