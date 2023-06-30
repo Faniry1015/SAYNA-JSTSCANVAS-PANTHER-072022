@@ -1,7 +1,7 @@
 /* voir bordures */
-/* *{
+*{
     border: solid 0.2px grey;
-} */
+}
 
 /* Définition de la palette de couleur*/
 :root {
@@ -76,12 +76,24 @@
 
 
 /* SECTION 2 : Section Principale et formulaire */
-.sec2En h2 {
+
+#sec2En__title__label {
+    font-family: beyno;
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+#sec2En__title__label span {
+    font-family:'Times New Roman', Times, serif
+}
+
+#sec2En__title__forTrans {
     font-family: "Wakanda Forever";
     font-size: 30px;
     max-width: 80%;
     letter-spacing: 3px;
     line-height: 40px;
+    margin: 50px 0;
 }
 
 .sec2En__art {
@@ -101,12 +113,11 @@
         grid-template-columns: repeat(4, 1fr);
         grid-template-areas: 
             "title  title art art"
-            "transc  transc art art"
             "formu  formu art art";
     }
 
     .sec2En__formCont {
-        margin-top: 10vw;
+        margin-top: 50px;
         margin-right: 20%;
     }
 
@@ -117,11 +128,6 @@
 
     .sec2En__title {
         grid-area: title;
-        margin-bottom: 5vw;
-    }
-    
-    .sec2En__transcript {
-        grid-area: transc;
     }
     
     .sec2En__formCont {
@@ -130,6 +136,7 @@
     .sec2En__art {
         grid-area: art;
         align-self: center;
+        justify-self: center;
     }
 }
 
@@ -147,11 +154,12 @@ dd {
 
 .sec2En__formCont textarea {
     color: var(--mySoftPink);
+    font-size: 15px;
     border-color: var(--mySoftPink);
     background-color: transparent;
-    padding: 5px 15px;
-    height: 30px;
-    border-radius: 20px;
+    padding: 15px 15px;
+    height: 50px;
+    border-radius: 50px;
     width: 100%;
     margin: 2% 0 10%;
 }
@@ -183,29 +191,21 @@ dd {
 }
 
 /* Popup Box après soumission du formulaire (avec un peu de JavaScript)*/
-#EnigPopupBox {
+#EnigPopupBox__mainContainer {
+    height: 100% ;
+    width: 100%;
     display: none;
+    position: fixed;
+    top:0;
+    left: 0;
     padding: 20px;
-    background-color:#3d2da691;
+    background : linear-gradient(#3D2DA6, #021740 );
     color: white;
-    margin: 15px;
-    border-radius: 38px;
+    z-index: 3;
   }
 
-  /* Popup Box The close X button */
-  .EnigClosebtn {
-    margin-left: 15px;
-    color: white;
-    font-weight: bold;
-    float: right;
-    font-size: 22px;
-    line-height: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
+  .EnigPopupBox__insideDiv {
 
-  .EnigClosebtn:hover {
-    color: black;
   }
 
 .sec2En__art{

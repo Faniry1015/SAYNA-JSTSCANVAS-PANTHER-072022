@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/enigmestyle.css">
 
-    <script src="script/enigScript.js" defer></script>
     <script src="script/main.js" defer></script>
+    <script src="script/enigScript.js" defer></script>
 
     <title>Enigme | Black Panther</title>
 </head>
@@ -125,15 +125,15 @@
         <section class="reveal sec2En">
 
             <div class="sec2En__title">
-                <h2>ENIGME NUMERO <span class="sec2En__currentDefNumber">1</span></h2>
+                <h2 id="sec2En__title__label">ENIGME NUMERO <span class="sec2En_currentDefNumber">1</span> </h2>
                 <p>Prouve ton talent d’espion et déchiffre cette réplique d’Okoyé écrite en Wakandais, et
                     apprend par la même occasion la première valeur d’une Dora Milaje !</p>
 
-                <h2 class="sec2En__title"> "SI JE SUIS FIDELE C’EST A CE TRONE
+                <h2 id="sec2En__title__forTrans"> "SI JE SUIS FIDELE C’EST A CE TRONE
                     PEU IMPORTE QUI MONTE DESSUS "</h2>
             </div>
 
-            <section class=" sec2En__transcript">
+            <section class=" sec2En__art">
                 <p>
                     Voici la transicription de l’alphabet :
                 </p>
@@ -193,38 +193,30 @@
                 </dl>
             </section>
 
-            <section class=" sec2En__art">
-                <p>Le savais tu ?</p>
-                <p>
-                    Plusieurs sources s’entendent pour dire que la lettre la plus utilisée en français est
-                    la lettre E. En pourcentage de fréquence, la lettre est utilisée à 14% dans une
-                    phrase. Et si tu regardais quel symbole revient le plus souvent ?
-                </p>
-            </section>
-
             <section class=" sec2En__formCont">
-                <form action="">
+                <form action="" class="quizzAnswerForm">
                     <div>
                         <label for="reponse">
                             Alors, as tu la réponse ?
                         </label>
                         <br>
-                        <textarea name="Réponse" id="reponse" cols="30" rows="1" placeholder="Réponse"
-                            required></textarea>
+                        <textarea class="userAnswer" name="Réponse" id="reponse" cols="30" rows="1"
+                            placeholder="Réponse"></textarea>
                     </div>
 
                     <div class="sec2En__formCont__subBtnCont">
                         <button type="submit" id="EnigSubmitBtnForm">ENVOYER</button>
                     </div>
-                    <!-- Message d'alerte pour l'envoi du formulaire -->
-                    <div class="alert" id="EnigPopupBox">
-                        <span class="EnigClosebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-                        Merci! Votre Réponse a bien été enregistrée
-                    </div>
                 </form>
             </section>
 
         </section>
+
+        <!-- Message d'alerte pour l'envoi du formulaire -->
+        <div class="alert" id="EnigPopupBox__mainContainer">
+            <div class="EnigPopupBox__insideDiv"></div>
+            Merci! Votre Réponse a bien été enregistrée
+        </div>
 
     </main>
 

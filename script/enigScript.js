@@ -1,7 +1,12 @@
-let EnigSubmitBtnForm = document.getElementById("EnigSubmitBtnForm")
+const quizzAnswerForm = document.querySelector(".quizzAnswerForm")
+const submitAnswer = document.querySelector("#EnigSubmitBtnForm")
+const resultPopupBox = document.querySelector("#EnigPopupBox__mainContainer")
+const userAnswer = document.querySelector("#reponse")
 
-let EnigPopupBox = document.getElementById("EnigPopupBox")
+quizzAnswerForm.addEventListener("submit", (e) => {
+    e.preventDefault()
+    resultPopupBox.style.display = "block"
+    const userAnswerVal = userAnswer.value.toLowerCase()
+    console.log(userAnswerVal)
 
-EnigSubmitBtnForm.addEventListener("click", () => {
-        EnigPopupBox.style.display = "block"
-    })
+})
