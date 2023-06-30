@@ -108,8 +108,8 @@ div {
     display: table;
 }
 
-.carousel__item {
-    float: left;
+.carousel__container :nth-child(11) img {
+
 }
 
 .carousel__next {

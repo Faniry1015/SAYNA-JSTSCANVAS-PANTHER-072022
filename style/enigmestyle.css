@@ -229,6 +229,7 @@ dd {
     color: white;
     font-family: Cantarell;
     text-transform: uppercase;
+    text-align: center;
   }
 
   .resultComment {
@@ -238,6 +239,7 @@ dd {
 
   .nextQ, #enigGoIndex {
     width: 174px;
+    max-width: 100%;
     height: 40px;
     border: none;
     border-radius: 38px;
