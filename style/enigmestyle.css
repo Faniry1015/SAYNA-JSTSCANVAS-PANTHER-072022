@@ -197,12 +197,12 @@ dd {
 
 /* Popup Box après soumission du formulaire (avec un peu de JavaScript)*/
 #EnigPopupBox__mainContainer {
-    height: 80% ;
-    width: 80%;
+    height: 90% ;
+    width: 60%;
     display: none;
     position: fixed;
-    top:10%;
-    left: 10%;
+    top:5%;
+    left: 20%;
     padding: 20px;
     background : linear-gradient(#3D2DA6ee, #021740ee );
     border-radius: 20px;
@@ -213,7 +213,7 @@ dd {
   }
 
   .EnigPopupBox__insideDiv {
-    height: 70% ;
+    height: 80% ;
     width: 70%;
     display: flex;
     flex-direction: column;
@@ -252,6 +252,27 @@ dd {
   #enigGoIndex {
     display: none;
   }
+
+  .comingFigCompte {
+    display: none;
+  }
+
+  .comingFigCompte * {
+    margin: 0 5px;
+  }
+
+  .comingFigCompte h2 {
+    font-family: Cantarell;
+    color: white;
+    text-transform: uppercase;
+  }
+
+  .box-rebours div {
+    display: inline;
+    font-size:25px ;
+  }
+
+  
 
 .sec2En__art{
     padding: 20%;
