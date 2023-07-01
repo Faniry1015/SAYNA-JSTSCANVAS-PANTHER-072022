@@ -44,10 +44,10 @@ quizzAnswerForm.addEventListener("submit", (e) => {
     resultPopupBox.style.display = "flex"
     const userAnswerVal = userAnswer.value.toUpperCase().replaceAll(" ", "")
     console.log(userAnswerVal, enigmeAnswer.toUpperCase().replaceAll(" ", ""))
-    if(userAnswerVal !== enigmeAnswer.toUpperCase().replaceAll(" ", "")) {
+    if(userAnswerVal === enigmeAnswer.toUpperCase().replaceAll(" ", "")) {
         if(qIndex >= qTab.length) {
             congrat.innerText = "Ton initiation est terminée !"
-            resultComment.innerText = ""
+            resultComment.remove()
             nextQ.style.display = "none"
             enigGoIndex.style.display = "block"
             comingFigCompte.style.display = "flex"
@@ -94,8 +94,36 @@ enigGoIndex.addEventListener("click",() => {
 } )
 
 /**Compte à rebour à la fin du quizz */
-const boxRebours = document.querySelector(".box-rebours")
-const today = new Date()
-const endDate = new Date("december 31, 2023 00:00:00")
-const compteRebour = endDate - today
-console.log(compteRebour)
+function reboursF() {
+    const rebours = document.querySelector(".box-rebours")
+    const jour = document.querySelector("#jour")
+    const heure = document.querySelector("#heure")
+    const minute = document.querySelector("#minute")
+    const seconde = document.querySelector("#seconde")
+    let today = new Date()
+    const endDate = new Date("december 31, 2023 00:00:00")
+
+    let total_secondes = (endDate - today) /1000
+
+    if (total_secondes > 0) {
+        let nb_jours = Math.floor((total_secondes) / (60*60*24))
+        let nb_heures = Math.floor((total_secondes - (nb_jours * 60 * 60 * 24)) / (60 * 60));
+                let nb_minutes = Math.floor((total_secondes - ((nb_jours * 60 * 60 * 24 + nb_heures * 60 * 60))) / 60);
+                let nb_secondes = Math.floor(total_secondes - ((nb_jours * 60 * 60 * 24 + nb_heures * 60 * 60 + nb_minutes * 60)));
+ 
+                jour.textContent = caractere(nb_jours);
+                heure.textContent = caractere(nb_heures);
+                minute.textContent = caractere(nb_minutes);
+                seconde.textContent = caractere(nb_secondes);
+    }
+
+    let minuteur = setTimeout("reboursF();", 1000)
+
+    function caractere(nb)
+    {
+        return (nb < 10) ? '0'+nb : nb
+    }
+
+}
+
+reboursF()

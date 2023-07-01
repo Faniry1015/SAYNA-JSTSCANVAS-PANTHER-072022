@@ -259,12 +259,18 @@ dd {
 
   .comingFigCompte * {
     margin: 0 5px;
+    font-weight: bold;
   }
 
   .comingFigCompte h2 {
     font-family: Cantarell;
     color: white;
     text-transform: uppercase;
+  }
+
+  .box-rebours {
+    font-size: 25px;
+    font-weight: bold;
   }
 
   .box-rebours div {
