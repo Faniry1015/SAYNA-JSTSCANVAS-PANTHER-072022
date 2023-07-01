@@ -30,7 +30,7 @@ socialLeftDiv.animate([
 });
 
 //Zoom sur les titres H1 et H2
-let titleHtoScale = document.querySelectorAll("h2, h1")
+let titleHtoScale = document.querySelectorAll("h2, h1, .sec3PrincAs__as__fig__imgCont__img")
 titleHtoScale.forEach(title => {
     title.addEventListener("mouseover", () => {
         title.style.transform = "scale(1.1)"
@@ -41,4 +41,19 @@ titleHtoScale.forEach(title => {
         title.style.transform = "none"
     })
 })
+
+/**Image qui suit la souris */
+document.onmousemove = suitsouris;
+
+function suitsouris(evenement) {
+  if (navigator.appName == "Microsoft Internet Explorer") {
+    var x = event.x + document.body.scrollLeft;
+    var y = event.y + document.body.scrollTop;
+  } else {
+    var x = evenement.pageX;
+    var y = evenement.pageY;
+  }
+  document.getElementById("mouseImg").style.left = (x + 1) + 'px';
+  document.getElementById("mouseImg").style.top = (y + 1) + 'px';
+}
 

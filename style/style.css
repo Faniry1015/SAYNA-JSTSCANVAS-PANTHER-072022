@@ -90,6 +90,14 @@ p {
     margin: 15px 0;
 }
 
+/**Image qui suit la souris */
+#mouseImg{
+    position:absolute;
+    display:block;
+    width: 25px;
+    z-index:5;
+  }
+
 
 /* Icônes réseaux sociaux latéral gauche */
 .reseauxSoc {

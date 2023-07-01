@@ -384,23 +384,3 @@ textarea {
   .messagePopupBox h2{
     color: white
   }
-  
-  /* Popup Box The close X button */
-  .closebtn {
-    margin-left: 15px;
-    padding: 15px ; 
-    color: white;
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-    position: absolute;
-    right: 0px;
-    top : 0px
-  }
-
-  .closebtn:hover {
-    color: black;
-  }
-
