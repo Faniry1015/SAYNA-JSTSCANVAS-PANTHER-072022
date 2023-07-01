@@ -29,8 +29,8 @@ socialLeftDiv.animate([
     duration: 1500,
 });
 
-//Zoom sur les titres H1 et H2
-let titleHtoScale = document.querySelectorAll("h2, h1, .sec3PrincAs__as__fig__imgCont__img")
+//Zoom sur les titres H1 et H2 et images
+let titleHtoScale = document.querySelectorAll("h2, h1, .sec3PrincAs__as__fig__imgCont__img, .sec3PrincAs__as__botfig, .allActorsImgWakanda")
 titleHtoScale.forEach(title => {
     title.addEventListener("mouseover", () => {
         title.style.transform = "scale(1.1)"
