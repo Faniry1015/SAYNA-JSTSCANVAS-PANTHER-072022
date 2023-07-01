@@ -19,6 +19,7 @@ const qTab = [
 const quizzAnswerForm = document.querySelector(".quizzAnswerForm")
 const submitAnswer = document.querySelector("#EnigSubmitBtnForm")
 const resultPopupBox = document.querySelector("#EnigPopupBox__mainContainer")
+const enigPopupBox__blur = document.querySelector(".EnigPopupBox__mainContainer")
 const userAnswer = document.querySelector("#reponse")
 let enigmeAnswer = "SI JE SUIS FIDELE C'EST A CE TRONE PEU IMPORTE QUI MONTE DESSUS"
 const congrat = document.querySelector(".congrat")
@@ -42,6 +43,7 @@ const indexPage = document.querySelector(".indexPage")
 quizzAnswerForm.addEventListener("submit", (e) => {
     e.preventDefault()
     resultPopupBox.style.display = "flex"
+    enigPopupBox__blur.style.display = "block"
     const userAnswerVal = userAnswer.value.toUpperCase().replaceAll(" ", "")
     console.log(userAnswerVal, enigmeAnswer.toUpperCase().replaceAll(" ", ""))
     if(userAnswerVal === enigmeAnswer.toUpperCase().replaceAll(" ", "")) {
@@ -84,6 +86,7 @@ nextQ.addEventListener("click", (e) => {
 /**Fermer quizz popupbox */
 document.addEventListener("click",() => {
     resultPopupBox.style.display = "none"
+    enigPopupBox__blur.style.display = "none"
 } )
 
 

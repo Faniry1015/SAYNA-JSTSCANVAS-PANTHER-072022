@@ -299,6 +299,8 @@ myForm.addEventListener("submit", (event) => {
     document.mySendMessageForm.reset()
 })
 
+document.addEventListener("click", () => messagePopupBox.style.display = "none")
+
 //Voir plus scroll vers Naissance d'un héros
 const voirPlus = document.querySelector(".seeMore")
 const voir = document.querySelector(".plus")

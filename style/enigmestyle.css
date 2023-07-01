@@ -197,32 +197,43 @@ dd {
 
 /* Popup Box après soumission du formulaire (avec un peu de JavaScript)*/
 #EnigPopupBox__mainContainer {
-    height: 90% ;
-    width: 60%;
+    height: 100% ;
+    width: 100%;
     display: none;
     position: fixed;
-    top:5%;
-    left: 20%;
-    padding: 20px;
-    background : linear-gradient(#3D2DA6ee, #021740ee );
-    border-radius: 20px;
+    top:0;
+    left: 0;
     color: white;
     z-index: 3;
     align-items: center;
     justify-content: center;
   }
 
+  .EnigPopupBox__mainContainer {
+    height: 100% ;
+    width: 100%;
+    position: fixed;
+    top:0;
+    left: 0%;
+    filter:blur(58px);
+    background : linear-gradient(#3D2DA6ee, #021740ee ) ;
+    display: none;
+    z-index: 2;
+  }
+
   .EnigPopupBox__insideDiv {
-    height: 80% ;
-    width: 70%;
+    height: 70% ;
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 10%;
     background: linear-gradient(#9E91B7, #3D2DA600);
+    backdrop-filter: blur(10px);
     box-shadow: 0 3.45 3.45 #000000;
     border-radius: 20px;
+    filter:none;
   }
 
   .congrat {
@@ -277,8 +288,6 @@ dd {
     display: inline;
     font-size:25px ;
   }
-
-  
 
 .sec2En__art{
     padding: 20%;
