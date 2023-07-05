@@ -1,4 +1,4 @@
-//Effet de transition au défilement de tous les sections
+//Fade in on scroll pages
 const ratio = .25
 const options = {
     root: null,
@@ -20,7 +20,7 @@ document.querySelectorAll(".reveal").forEach(function (r) {
     observer.observe(r)
 })
 
-//Animation de la barre latérale pour les logos réseaux sociaux
+//Animate left social media logo
 const socialLeftDiv = document.querySelector(".reseauxSoc")
 socialLeftDiv.animate([
     { opacity: 0, transform: 'translateY(-300px)' },
@@ -29,7 +29,7 @@ socialLeftDiv.animate([
     duration: 1500,
 });
 
-//Zoom sur les titres H1 et H2 et images
+//Zoom on H1 and H2 titles
 let titleHtoScale = document.querySelectorAll("h2, h1, .sec3PrincAs__as__fig__imgCont__img, .sec3PrincAs__as__botfig, .allActorsImgWakanda  ")
 titleHtoScale.forEach(title => {
     title.addEventListener("mouseover", () => {
@@ -42,7 +42,7 @@ titleHtoScale.forEach(title => {
     })
 })
 
-/**Image qui suit la souris */
+/**Img following mouse */
 document.onmousemove = suitsouris;
 
 function suitsouris(evenement) {
@@ -56,4 +56,3 @@ function suitsouris(evenement) {
   document.getElementById("mouseImg").style.left = (x + 1) + 'px';
   document.getElementById("mouseImg").style.top = (y + 1) + 'px';
 }
-
