@@ -1,4 +1,4 @@
-/**Quizz */
+/**QUIZZ */
 //Tableau des questions 2 et 3 du quizz
 const qTab = [ 
     {
@@ -15,7 +15,7 @@ const qTab = [
     }
 ]
 
-/**Selecteurs */
+/**Selector */
 const quizzAnswerForm = document.querySelector(".quizzAnswerForm")
 const submitAnswer = document.querySelector("#EnigSubmitBtnForm")
 const resultPopupBox = document.querySelector("#EnigPopupBox__mainContainer")
@@ -65,8 +65,7 @@ quizzAnswerForm.addEventListener("submit", (e) => {
     }
 })
 
-
-/**Next question si reponse est vraie */
+/**Next question if true */
 let qIndex = 0
 let qNumber = 1
 nextQ.addEventListener("click", (e) => {
@@ -83,20 +82,19 @@ nextQ.addEventListener("click", (e) => {
     ++qIndex
 })
 
-/**Fermer quizz popupbox */
+/**Close quizz popupbox */
 document.addEventListener("click",() => {
     resultPopupBox.style.display = "none"
     enigPopupBox__blur.style.display = "none"
 } )
 
-
-/**Revenir à la page principale à la fin du Quizz */
+/**Back to index page at the end of the Quizz */
 const enigGoIndex = document.querySelector("#enigGoIndex")
 enigGoIndex.addEventListener("click",() => {
     indexPage.click()
 } )
 
-/**Compte à rebour à la fin du quizz */
+/**Count down at the end of the Quizz */
 function reboursF() {
     const rebours = document.querySelector(".box-rebours")
     const jour = document.querySelector("#jour")
