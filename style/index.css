@@ -1,10 +1,5 @@
-/* Vérification
-div {
-    border: solid red 1px
-} */
-
 /* SECTION 1: Black Panther */
-/* Définition de la palette de couleur*/
+/* Colors*/
 :root {
     --myWhite: #FFFFFF ;
     --mySoftPink : #F2CEF2 ;
@@ -45,7 +40,7 @@ div {
 }
 
 
-/* SECTION 2: Carroussel acteurs descriptions */
+/* SECTION 2: Caroussel, acotrs and descriptions */
 .sec2Carrous {
     margin-left: 10%;
 }
@@ -53,7 +48,7 @@ div {
     font-size: 10px;
 }
 
-/**Stylisation générale de chaque slide */
+/**Style for each slide element */
 .item {
     background-color: var(--myDarkBlue);
     box-shadow: 0 15px #3232321a, 0 5px 15px #0000001a;
@@ -162,7 +157,7 @@ div {
         display: block;
     }
 }
-/* SECTION 3 : Article principal et Aside */
+/* SECTION 3 : main article and aside */
 .sec3PrincAs {
     margin: 75px 5% 75px 10%;
 }
@@ -176,7 +171,7 @@ div {
     }
 }
 
-/* Article principale */
+/* Main Article */
 .sec3PrincAs__artP {
     margin: 40px 5% 0;
 }
@@ -192,7 +187,7 @@ div {
     justify-content: space-between;
 }
 
-/* Donner au conteneur une hauteur plus petit que l'image et ajouter un z-index */
+/* Adding container height less than img height and adding a heigher z-index*/
 .sec3PrincAs__as__fig__imgCont{
     text-align: center;
     height: 175px; 
@@ -203,7 +198,7 @@ div {
     z-index: 1;
 }
 
-/* Contenu principal aside */
+/* Main contain and aside */
 .sec3PrincAs__as__fig__descDiv {
     background-color: var(--myWhite);
     border-radius: 10px;
@@ -227,7 +222,7 @@ div {
     list-style: none;
 }
 
-/* Boutons violets dans Aside */
+/* Violet button in aside */
 .sec3PrincAs__as__fig__descDiv__btn ul {
     display: flex;
     justify-content: space-between;
@@ -253,13 +248,13 @@ div {
     font-weight: bold;
 }
 
-/* Image de black panther dans la partie inférieure de Aside */
+/* Black panther img in the bottom of aside */
 .sec3PrincAs__as__botfig img {
     max-width: 100%
 }
 
 
-/* SECTION 4 : Formulaire */
+/* SECTION 4 : Form */
 .sec4FormSec {
     background: url(../Assets/Illustrations_Logo/Accueil/Pantherhome4.png) no-repeat;
     background-size: cover;
@@ -295,7 +290,7 @@ div {
     margin: 0 10px;
 }
 
-/* Formatage des input et textarea du formulaire */
+/* Input and textarea style in form */
 .sec4FormSec__form input {
     /* width: 520px;
     height: 56px; trop grand */
@@ -328,7 +323,7 @@ textarea {
     font-family: cantarell;
 }
 
-/* Media queries pour réduire les marges du formulaire pour les petites écrans */
+/* Form media query to reduce margin */
 @media screen and (max-width: 600px) {
     .sec4FormSec__form input {
         width: 100%;
@@ -344,7 +339,7 @@ textarea {
     }
 }
 
-/* Boutons submit du formulaire */
+/* Form submit button */
 .sec4FormSec__form button {
     /* width: 174px;
     height: 54px; trop grand */
@@ -361,7 +356,7 @@ textarea {
     filter: drop-shadow(0 0 10px var(--mySoftPink)) ;
 }
 
-/* Popup Box après soumission du formulaire (avec un peu de JavaScript)*/
+/* Form Popup Box on submit*/
 .messagePopupBox {
     display: none;
     align-items: center;
