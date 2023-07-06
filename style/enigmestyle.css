@@ -1,4 +1,4 @@
-/* Définition de la palette de couleur*/
+/* Colors*/
 :root {
     --myWhite: #FFFFFF ;
     --mySoftPink : #F2CEF2 ;
@@ -10,8 +10,8 @@
  }
 
 
-/* SECTION 1 : Relève le défi */
-/* Définition des grilles */
+/* SECTION 1 : Take up the challenge */
+/* Grid area */
 .sec1En {
     display: grid;
     grid-template-columns: 1fr;
@@ -50,7 +50,7 @@
     align-self: center;
 }
 
-/* Alignement à l'intérieur des grilles */
+/* Place elements in to the grid */
 .sec1En__imgCont img {
     max-width: 100%;
 }
@@ -70,7 +70,7 @@
 }
 
 
-/* SECTION 2 : Section Principale et formulaire */
+/* SECTION 2 : Main section and article */
 
 #sec2En__title__label {
     font-family: beyno;
@@ -101,7 +101,7 @@
     margin: 10vw 10% 10vw 15%;
 }
 
-/* Définition d'une grille pour placer les éléments sur les grands écrans*/
+/* Grid and media query for small screen */
 @media screen and (min-width: 850px) {
     .sec2En {
         display: grid;
@@ -135,7 +135,7 @@
     }
 }
 
-/* Mettre la traduction de l'alphabet en inline */
+/* Alphabet translation inline */
 dt, dd {
     display: inline;
     font-size: 16px;
@@ -145,8 +145,7 @@ dd {
     font-family: "Wakanda Forever";
 }
 
-/* Mise en page à l'intérieur des grilles */
-
+/* Place element inside the grid */
 .sec2En__formCont textarea {
     color: var(--mySoftPink);
     font-size: 12px;
@@ -163,7 +162,7 @@ dd {
     color: var(--mySoftPink);
 }
 
-/* Boutons submit du formulaire */
+/* Submit button in form */
 .sec2En__formCont button {
     /* width: 174px;
     height: 54px; trop grand */
@@ -185,12 +184,12 @@ dd {
     justify-content: center;
 }
 
-/**Bouton retour à l'accueil à la fin du quizz */
+/**Back button at the begining and end of the quizz */
 #EnigGoIndex {
     display: none;
 }
 
-/* Popup Box après soumission du formulaire (avec un peu de JavaScript)*/
+/* Result Popupbox at the and of the quizz*/
 #EnigPopupBox__mainContainer {
     height: 100% ;
     width: 100%;
