@@ -1,4 +1,4 @@
-/* Définition de la palette de couleur*/
+/* Colors*/
 :root {
     --myWhite: #FFFFFF ;
     --mySoftPink : #F2CEF2 ;
@@ -36,7 +36,7 @@
     font-size: 40px;
 }
 
-/* SECTION 2 : Article principale */
+/* SECTION 2 : Main article */
 .sec2WaArtP {
     margin: 0 5% 0 12.5%;
 }
@@ -47,7 +47,7 @@
     background-size: contain;
 }
 
-/* Media Query pour les grands écrans */
+/* Media Query for small screen */
 @media screen and (min-width: 850px) {
     .Sec2WaArtP__artPCont {
         column-count: 2;
