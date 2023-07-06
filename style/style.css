@@ -1,11 +1,11 @@
-/* Remise à zéro des paramètres et Box sizing */
+/* Box sizing and reinitialize margin and padding */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Définition de la palette de couleur*/
+/* Colors*/
  :root {
     --myWhite: #FFFFFF ;
     --mySoftPink : #F2CEF2 ;
@@ -16,7 +16,7 @@
     --myDarkBlue:#021740;
  }
 
- /* Typographies */
+ /* Typography */
 
 @font-face {
     font-family: Panthera;
@@ -71,7 +71,7 @@ header li a {
     font-size: 20px;
 }
 
-/* Hyperliens */
+/* Links */
 a {
     color: var(--myWhite);
 }
@@ -80,7 +80,7 @@ a:hover, button:hover {
     cursor: pointer;
 }
 
-/* Background et marges général*/
+/* Background and margin*/
 body {
     background: url(../Assets/Illustrations_Logo/All_pages/arrière_plan.png) no-repeat;
     background-size: 100% 100%;
@@ -90,7 +90,7 @@ p {
     margin: 15px 0;
 }
 
-/**Image qui suit la souris */
+/**Img following mouse */
 #mouseImg{
     position:absolute;
     display:block;
@@ -99,7 +99,7 @@ p {
   }
 
 
-/* Icônes réseaux sociaux latéral gauche */
+/* Keft social media icons */
 .reseauxSoc {
     position: fixed;
     top: 0;
@@ -138,7 +138,7 @@ p {
     filter: invert(0) sepia(100%) saturate(0%) hue-rotate(3deg) brightness(100%) contrast(104%)
 }
 
-/*Effet de transition au scroll - fade in */
+/*Fade in animation on scroll */
 .reveal {
     opacity : 0;
     transform : translateX(-50px);
@@ -149,6 +149,7 @@ p {
     transform: translateX(0);
     transition: .5s
 }
+
 
 /* HEADER */
 header {
@@ -212,7 +213,7 @@ header {
 }
 
 /* FOOTER */
-/* Typographie du footer */
+/* Footer Typography */
 .footerDiv p, 
 .footerDiv a,
 .footerDiv li {
@@ -240,7 +241,7 @@ footer {
     margin: 200px 10% 50px;
 }
 
-/* Media queries pour les petites écrans */
+/* Media queries for small screen */
 @media screen and (max-width: 700px) {
     .footerDiv {
         margin: 100px 10px 50px;
@@ -258,7 +259,7 @@ footer {
     
 }
 
-/* Définition d'une grille pour le positionnement des parties du footer*/
+/* Grid for footer elements*/
 .footerDiv {
     display: grid;
     grid-template-areas: 
@@ -267,7 +268,7 @@ footer {
     gap: 15px;
 }
 
-/* Media Query pour les très petites écrans */
+/* Media Query for small screen */
 @media screen and (max-width: 400px) {
     .footerDiv {
         display: grid;
@@ -295,7 +296,7 @@ footer {
     grid-area: pol;
 }
 
-/* Propriété de chaque élément du footer */
+/* Property for each footer element */
 .logo {
 display: flex;
 justify-content: center;
