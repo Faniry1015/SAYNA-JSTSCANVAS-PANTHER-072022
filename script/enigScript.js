@@ -1,5 +1,5 @@
 /**QUIZZ */
-//Tableau des questions 2 et 3 du quizz
+//Question, answer and did you know array (2 and 3)
 const qTab = [ 
     {
         question: "Une anecdote intéressante est écrite juste en dessous mais elle est codée par un code césar également appelé code de chiffrement par décalage . L’alphabet a été décalé, trouve la clé de chiffrement qui te permettrait de retrouver les lettres et retranscris la phrase :",
