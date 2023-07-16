@@ -36,7 +36,6 @@ const qCurrentNumber = document.querySelector(".sec2En_currentDefNumber")
 const currentQuestionSentence = document.querySelector(".currentQuestionSentence")
 const currentIndice = document.querySelector(".currentIndice")
 const doYouKnow = document.querySelector(".doYouKnow")
-
 const indexPage = document.querySelector(".indexPage")
 
 /**Submit answer */
@@ -44,9 +43,15 @@ quizzAnswerForm.addEventListener("submit", (e) => {
     e.preventDefault()
     resultPopupBox.style.display = "flex"
     enigPopupBox__blur.style.display = "block"
-    const userAnswerVal = userAnswer.value.toUpperCase().replaceAll(" ", "")
-    console.log(userAnswerVal, enigmeAnswer.toUpperCase().replaceAll(" ", ""))
-    if(userAnswerVal === enigmeAnswer.toUpperCase().replaceAll(" ", "")) {
+    const specCarAr = [" ", '"', "."]
+    let userAnswerVal = userAnswer.value
+    let enigmeAnswerVal = enigmeAnswer
+    for (car of specCarAr) {
+        userAnswerVal = userAnswerVal.toUpperCase().replaceAll(car, "")
+        enigmeAnswerVal = enigmeAnswerVal.toUpperCase().replaceAll(car, "")
+    }
+    console.log(userAnswerVal, enigmeAnswerVal)
+    if(userAnswerVal === enigmeAnswerVal) {
         if(qIndex >= qTab.length) {
             congrat.innerText = "Ton initiation est terminée !"
             resultComment.remove()
