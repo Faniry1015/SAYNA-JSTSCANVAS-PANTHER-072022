@@ -1,2 +1,2 @@
 # SAYNA-JSTSCANVAS-PANTHER-072022
-SAYNA D-CLICK 2023, évaluation Javascript
+SAYNA D-CLICK 2023, Evaluation Javascript
